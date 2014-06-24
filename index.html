@@ -8,7 +8,7 @@
     <title>Axesh Ajmera: Portfolio</title>
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!-- <link href="> -->
     <link href="css/print.css" rel="stylesheet" media="print">
     <style>
       html {
@@ -72,7 +72,7 @@ footer span { float: right; font-style: italic; }
 
     <div class="container">
       <div class="hero">
-        <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: me@email.com
+        <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: ajmeraaxesh@gmail.com
       </div>
 
       <div class="content">
@@ -101,6 +101,22 @@ footer span { float: right; font-style: italic; }
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
     <script>
+      function loadCss(url) {
+            var link = document.createElement("link");
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            link.href = url;
+            document.getElementsByTagName("head")[0].appendChild(link);
+      }
+
+      //Load web fonts
+      document.addEventListener("DOMContentLoaded", function(event) {
+          loadCss('//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"');
+
+      });
+    </script>
+    <script src="http://www.google-analytics.com/analytics.js" async></script>
+    <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
 
@@ -108,7 +124,6 @@ footer span { float: right; font-style: italic; }
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
-    <script src="http://www.google-analytics.com/analytics.js"></script>
     <script async src="js/perfmatters.js"></script>
   </body>
 </html>
